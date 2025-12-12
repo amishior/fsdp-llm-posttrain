@@ -1,0 +1,11 @@
+policy: runs/sft_qwen3
+reward_model: runs/rm_qwen3
+prompts_dataset: Mxode/Chinese-Instruct
+prompts_dataset_config: null
+max_steps: 50
+seq_len: 512
+micro_batch_size: 1
+grad_accum_steps: 1
+lr: 1.0e-6
+bf16: true
+output_dir: runs/ppo_qwen3

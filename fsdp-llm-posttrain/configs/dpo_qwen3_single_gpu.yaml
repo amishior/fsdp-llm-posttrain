@@ -1,0 +1,14 @@
+model: Qwen/Qwen3-0.6B
+dataset: opencsg/UltraFeedback-chinese
+dataset_config: null   # will auto-pick a binarized config if available
+max_steps: 50
+seq_len: 1024
+micro_batch_size: 1
+grad_accum_steps: 8
+lr: 1.0e-5
+warmup_steps: 10
+weight_decay: 0.1
+beta: 0.1
+bf16: true
+gradient_checkpointing: true
+output_dir: runs/dpo_qwen3
