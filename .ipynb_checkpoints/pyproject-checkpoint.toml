@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fsdp-llm-posttrain"
+version = "0.1.0"
+description = "Single-GPU LLM post-training lab (SFT/DPO/RM/PPO), FSDP-ready."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2",
+  "transformers>=4.43",
+  "datasets>=2.19",
+  "accelerate>=0.33",
+  "trl>=0.11.4",
+  "peft>=0.12.0",
+  "safetensors>=0.4.3",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

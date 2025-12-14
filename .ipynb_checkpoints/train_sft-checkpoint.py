@@ -24,7 +24,7 @@ def collate_sft(batch: List[Dict[str, Any]], tokenizer, seq_len: int):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", type=str, default=None, help="YAML config path (optional)")
-    ap.add_argument("--model", type=str, default="Qwen/Qwen3-0.6B")
+    ap.add_argument("--model", type=str, default="/home/amishor/Qwen3-0.6B")
     ap.add_argument("--dataset", type=str, default="Mxode/Chinese-Instruct")
     ap.add_argument("--dataset-config", type=str, default=None)
     ap.add_argument("--max-steps", type=int, default=50)
