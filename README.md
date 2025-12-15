@@ -1,6 +1,6 @@
 # fsdp-llm-posttrain
 
-Single-GPU **LLM post-training** lab (SFT / DPO / Reward Model / PPO) designed to be **FSDP-ready** later.
+Single-GPU **LLM post-training** lab (SFT / DPO / Reward Model / PPO).
 
 - Default model: **Qwen3** (open on Hugging Face).  
 - Optional model: **Gemma 3** (requires accepting Google's license on Hugging Face before downloading weights).
