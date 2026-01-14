@@ -62,7 +62,6 @@ def main():
     model.to(device)
     model.train()
 
-    # Load dataset (streaming) and cache a small subset to keep it runnable.
     ds_stream = stream_dataset(args.dataset, split="train", config=args.dataset_config)
     cached = []
     for ex in ds_stream:
