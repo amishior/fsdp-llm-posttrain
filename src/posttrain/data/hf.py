@@ -8,12 +8,10 @@ def pick_config(dataset: str, prefer: List[str]) -> Optional[str]:
         configs = get_dataset_config_names(dataset)
     except Exception:
         return None
-    # exact match first
     for p in prefer:
         for c in configs:
             if c == p:
                 return c
-    # contains match
     for p in prefer:
         for c in configs:
             if p.lower() in c.lower():
