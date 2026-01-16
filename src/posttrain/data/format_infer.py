@@ -21,7 +21,6 @@ def infer_preference_fields(example: Dict[str, Any]) -> Tuple[str, str, str]:
     if "query" in example and "chosen" in example and "rejected" in example:
         return str(example["query"]), str(example["chosen"]), str(example["rejected"])
 
-    # UltraFeedback-like: may have 'instruction' plus 'chosen'/'rejected' or 'best'/'worst'
     if "instruction" in example:
         prompt = str(example["instruction"])
         for ck, rk in (("chosen", "rejected"), ("best_response", "worst_response"), ("best", "worst")):
