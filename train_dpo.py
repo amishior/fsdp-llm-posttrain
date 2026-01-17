@@ -28,7 +28,7 @@ def logprob_of_completion(tokenizer, model, prompt: str, completion: str, device
         out = model(**tok_full)
         logits = out.logits  # [1, T, V]
     # Shift for next-token prediction
-    logprobs = torch.log_softmax(logits[:, :-1, :], dim=-1)  # [1, T-1, V]
+    logprobs = torch.log_softmax(logits[:, :-1, :], dim=-1)
     labels = tok_full["input_ids"][:, 1:]  # [1, T-1]
 
     # Determine which positions correspond to completion (exclude prompt tokens)
