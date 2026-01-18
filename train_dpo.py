@@ -31,7 +31,7 @@ def logprob_of_completion(tokenizer, model, prompt: str, completion: str, device
     logprobs = torch.log_softmax(logits[:, :-1, :], dim=-1)
     labels = tok_full["input_ids"][:, 1:]  # [1, T-1]
 
-    # Determine which positions correspond to completion (exclude prompt tokens)
+    # Determine which positions correspond to completion
     prompt_len = tok_prompt["input_ids"].shape[1]
     # In shifted space, completion starts at index (prompt_len-1)
     start = max(prompt_len - 1, 0)
