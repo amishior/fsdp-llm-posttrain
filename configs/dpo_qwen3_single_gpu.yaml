@@ -1,6 +1,6 @@
 model: Qwen/Qwen3-0.6B
 dataset: opencsg/UltraFeedback-chinese
-dataset_config: null   # will auto-pick a binarized config if available
+dataset_config: null
 max_steps: 50
 seq_len: 1024
 micro_batch_size: 1
