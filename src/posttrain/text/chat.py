@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Optional
 
 def format_sft_example(example: Dict[str, Any]) -> str:
     """Best-effort: turns an arbitrary instruction dataset row into a single training text."""
-    # Common patterns: instruction/input/output
+    # Common patterns: 
     if "instruction" in example and ("output" in example or "response" in example):
         inst = str(example.get("instruction", "")).strip()
         inp = str(example.get("input", "")).strip()
