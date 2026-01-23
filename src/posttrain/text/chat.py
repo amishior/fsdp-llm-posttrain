@@ -10,7 +10,7 @@ def format_sft_example(example: Dict[str, Any]) -> str:
         out = str(example.get("output", example.get("response", ""))).strip()
         prompt = inst if not inp else f"{inst}\n\n{inp}"
         return f"### 指令\n{prompt}\n\n### 回复\n{out}"
-    # ShareGPT-style: conversations/messages
+    # ShareGPT-style: 
     for key in ("conversations", "messages"):
         if key in example and isinstance(example[key], list):
             msgs = example[key]
