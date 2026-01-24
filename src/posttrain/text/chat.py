@@ -28,7 +28,7 @@ def format_sft_example(example: Dict[str, Any]) -> str:
                 else:
                     parts.append(f"{role}：{val}")
             return "\n".join(parts).strip()
-    # Fallback: concatenate string fields
+    # Fallback: 
     for k in ("prompt", "question", "query", "text"):
         if k in example:
             return str(example[k]).strip()
